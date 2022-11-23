@@ -13,8 +13,10 @@ export class ProductListComponent implements OnInit{
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
+
+    rateClickedMessage: string = '';
     
-    private _listFilter: string = '';
+    private _listFilter: string = 'a';
 
     get listFilter(): string {
         return this._listFilter;
@@ -92,5 +94,9 @@ export class ProductListComponent implements OnInit{
 
     ngOnInit(): void {
         this.listFilter;
+    }
+
+    onRatingClicked(message: string): void {
+      this.rateClickedMessage = message;
     }
 }
