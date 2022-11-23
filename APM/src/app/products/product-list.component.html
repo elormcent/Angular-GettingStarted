@@ -47,7 +47,7 @@
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price | currency: 'GHS ' : 'symbol' : '1.2-4'}}</td>
                         <td>{{product.description}}</td>
-                        <td><pm-star></pm-star></td>
+                        <td><pm-star [rating]='product.starRating'></pm-star></td>
                     </tr>
                 </tbody>
             </table>
